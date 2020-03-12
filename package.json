@@ -1,0 +1,63 @@
+{
+  "name": "vue-components-geek",
+  "version": "1.0.5",
+  "description": "",
+  "main": "lib/index.min.js",
+  "scripts": {
+    "build-dev": "webpack --config build/webpack.dev.conf.js",
+    "build-prod": "webpack --config build/webpack.pro.conf.js",
+    "build": "npm run build-prod && npm run components",
+    "components": "webpack --config build/webpack.component.js --progress --color",
+    "start": "webpack-dev-server --config build/webpack.dev.conf.js",
+    "lint": "eslint src/*.js",
+    "format": "prettier-eslint --write src/*.js",
+    "node": "node components.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "lib",
+    "src",
+    "types"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "autoprefixer": "^9.7.4",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-vue-jsx": "^3.7.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0",
+    "lodash": "^4.17.15",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-url": "^8.0.0",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "vue-loader": "^15.9.0",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-merge": "^4.2.2",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.8.7",
+    "@babel/runtime-corejs3": "^7.8.7",
+    "babel-loader": "^8.0.6",
+    "core-js": "^3.6.4",
+    "glob": "^7.1.6",
+    "vue": "^2.6.11"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.11",
+    "vue-loader": "^15.9.0"
+  }
+}
